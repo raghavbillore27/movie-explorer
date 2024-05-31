@@ -2,14 +2,17 @@
     "name": "movie-explorer",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
-        "start-client": "npm run --prefix client start",
-        "start-server": "npm run --prefix server start",
-        "build": "npm run build-client && npm run build-server",
-        "build-client": "npm run --prefix client build",
-        "build-server": "npm run --prefix server build"
+      "install-client": "npm install --prefix client",
+      "install-server": "npm install --prefix server",
+      "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+      "start-client": "npm run --prefix client start",
+      "start-server": "npm run --prefix server start",
+      "build": "npm run build-client && npm run build-server",
+      "build-client": "npm run --prefix client build",
+      "build-server": "echo 'Server does not need build step'"
     },
     "dependencies": {
-        "concurrently": "^6.5.1"
+      "concurrently": "^6.0.0"
     }
-}
+  }
+  
