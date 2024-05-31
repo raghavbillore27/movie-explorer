@@ -1,0 +1,15 @@
+{
+    "name": "movie-explorer",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+        "start-client": "npm run --prefix client start",
+        "start-server": "npm run --prefix server start",
+        "build": "npm run build-client && npm run build-server",
+        "build-client": "npm run --prefix client build",
+        "build-server": "npm run --prefix server build"
+    },
+    "dependencies": {
+        "concurrently": "^6.5.1"
+    }
+}
