@@ -36,6 +36,11 @@ app.post('/api/login', passport.authenticate('local'), (req, res) => {
   res.send('Logged in');
 });
 
+//rest api
+app.use('*',function(req,res){
+    res.sendFile(path.join(__dirname,'../client/build/index.html'));
+})
+
 // Other routes...
 
 const PORT = process.env.PORT || 5000;
